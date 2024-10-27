@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 import { Package } from 'lucide-react'
-import { Hero } from '@/components/sections/Hero'
-import { ProductCategories } from '@/components/sections/ProductCategories'
-import { VideoSection } from '@/components/sections/VideoSection'
-import { Testimonials } from '@/components/sections/Testimonials'
+import { Hero } from '@/components/sections/hero'
+import { ProductCategories } from '@/components/sections/productCategories'
+import { VideoSection } from '@/components/sections/videoSection'
+import { Testimonials } from '@/components/sections/testimonials'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 

@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-import { Toggle } from "@/components/ui/toggle"; // Import Toggle
 import Image from 'next/image';
 import { Button } from '@/components/ui/button'; // Corrected import statement for Button
+import { Switch } from '@radix-ui/react-switch';
+import { Label } from '@radix-ui/react-label';
 
 export default function Products() {
   console.log("Rendering Products component");
@@ -116,11 +117,16 @@ export default function Products() {
             <button className="bg-blue-500 text-white rounded-r-md p-2">
               <MagnifyingGlassIcon className="h-5 w-5" />
             </button>
-            <Toggle 
-              className="ml-2 bg-blue-500 text-white p-2 rounded"
-            >
-              {isGridView ? 'List View' : 'Grid View'}
-            </Toggle>
+            <div className="flex items-center space-x-2">
+      <Switch
+        id="view-toggle"
+        checked={isGridView}
+        onCheckedChange={toggleView}
+      />
+      <Label htmlFor="view-toggle">
+        {isGridView ? "List View" : "Grid View"}
+      </Label>
+    </div>
           </div>
         </section>
         
