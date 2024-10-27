@@ -6,6 +6,7 @@ import { ProjectConfiguration } from '@/components/sections/projectConfiguration
 import { Timeline } from '@/components/sections/timeline';
 import IndustryBrowser from '@/components/sections/industryBrowser';
 import FAQ from '@/components/sections/faq';
+import { Sample } from '@/components/sections/sample';
 
 export default function Home() {
   const [startDate, setStartDate] = useState(new Date());
@@ -32,6 +33,9 @@ export default function Home() {
       </div>
       <div>
         <FAQ/>
+      </div>
+      <div>
+        <Sample/>
       </div>
     </main>
   );
