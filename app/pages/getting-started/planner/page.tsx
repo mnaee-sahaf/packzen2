@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ProjectConfiguration } from '@/components/sections/projectConfiguration';
 import { Timeline } from '@/components/sections/timeline';
 import IndustryBrowser from '@/components/sections/industryBrowser';
+import FAQ from '@/components/sections/faq';
 
 export default function Home() {
   const [startDate, setStartDate] = useState(new Date());
@@ -28,6 +29,9 @@ export default function Home() {
       <Timeline startDate={startDate} />
       <div>
         <IndustryBrowser />
+      </div>
+      <div>
+        <FAQ/>
       </div>
     </main>
   );
