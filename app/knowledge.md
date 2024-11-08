@@ -31,6 +31,12 @@
   4. Types/utilities
 - Remove unused imports to prevent bundle bloat
 
+## Performance Optimizations
+- Use React.useMemo for expensive computations or frequently re-rendered components
+- Optimize session handling with proper configuration
+- Prevent unnecessary revalidation and refetching
+- Minimize component re-renders
+
 ## Key Features
 - Responsive design with Tailwind CSS
 - Custom font configuration using local Geist fonts

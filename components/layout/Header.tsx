@@ -11,12 +11,18 @@ import {
   DropdownMenuItem,
   DropdownMenuPortal
 } from "@/components/ui/dropdown-menu";
+import React from 'react';
 
 // Header component displayed on all pages
 // Contains main navigation, logo, and call-to-action buttons
 // Used in the root layout to provide consistent navigation
 export function Header() {
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({
+  required: false,
+  onUnauthenticated() {
+    // Do nothing - this prevents unnecessary redirects
+  },
+});
   const router = useRouter();
 
   const handleAuthAction = async () => {
@@ -122,25 +128,23 @@ export function Header() {
 
         {/* Auth button */}
         <div className="flex items-center">
-          {status === 'loading' ? (
-            <Button disabled className="bg-gray-300">
-              Loading...
-            </Button>
-          ) : session ? (
-            <Button 
-              onClick={handleAuthAction}
-              className="bg-blue-600 text-white hover:bg-blue-700"
-            >
-              Sign Out
-            </Button>
-          ) : (
-            <Button 
-              onClick={handleAuthAction}
-              className="bg-blue-600 text-white hover:bg-blue-700"
-            >
-              Sign In
-            </Button>
-          )}
+          {React.useMemo(() => {
+            if (status === 'loading') {
+              return (
+                <Button disabled className="bg-gray-300">
+                  Loading...
+                </Button>
+              );
+            }
+            return (
+              <Button 
+                onClick={handleAuthAction}
+                className="bg-blue-600 text-white hover:bg-blue-700"
+              >
+                {session ? 'Sign Out' : 'Sign In'}
+              </Button>
+            );
+          }, [status, session, handleAuthAction])}
         </div>
 
         {/* Contact information */}

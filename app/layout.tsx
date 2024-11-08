@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geistSans.className}>
-        <SessionProvider refetchInterval={0} refetchOnWindowFocus={false}>
+        <SessionProvider refetchInterval={0} refetchOnWindowFocus={false} refetchWhenOffline={false}>
           <div className="flex min-h-screen flex-col">
             <Header />
             {children}
