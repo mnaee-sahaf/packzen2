@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function OrderForm() {
   return (
@@ -9,7 +10,13 @@ export default function OrderForm() {
       <div className="flex flex-col items-center lg:w-1/2">
         {/* Main Product Image */}
         <div className="relative w-full max-w-md h-96 bg-gray-100 rounded-lg overflow-hidden">
-          <img src="/images/soap.jpg" alt="Product Image" className="object-contain w-full h-full" />
+          <Image
+            src="/images/soap.jpg"
+            alt="Product Image"
+            layout="fill"
+            objectFit="contain"
+            className="rounded-lg"
+          />
           {/* Carousel Controls */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             <button className="w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center">‹</button>
@@ -18,12 +25,30 @@ export default function OrderForm() {
         </div>
         {/* Thumbnail Images */}
         <div className="flex mt-4 space-x-2">
-          <img src="/images/soap.jpg" alt="Custom Soap Box" className="w-16 h-16 rounded-lg cursor-pointer" />
-          <img src="/images/soap2.jpg" alt="Custom Soap Box 2" className="w-16 h-16 rounded-lg cursor-pointer" />
-          <img src="/images/thumbnail3.jpg" alt="Custom Soap Box 3" className="w-16 h-16 rounded-lg cursor-pointer" />
+          <Image
+            src="/images/soap.jpg"
+            alt="Custom Soap Box"
+            width={64}
+            height={64}
+            className="rounded-lg cursor-pointer"
+          />
+          <Image
+            src="/images/soap2.jpg"
+            alt="Custom Soap Box 2"
+            width={64}
+            height={64}
+            className="rounded-lg cursor-pointer"
+          />
+          <Image
+            src="/images/thumbnail3.jpg"
+            alt="Custom Soap Box 3"
+            width={64}
+            height={64}
+            className="rounded-lg cursor-pointer"
+          />
         </div>
-           {/* Features List */}
-           <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 rounded-lg shadow-md pd-10 mg-10 bg-gray-100 ">
+        {/* Features List */}
+        <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 rounded-lg shadow-md pd-10 mg-10 bg-gray-100 ">
           <div>✔️ Low Minimums of 100 Boxes</div>
           <div>✔️ Fast Turnaround Times</div>
           <div>✔️ Free Die and Plates</div>
