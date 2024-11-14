@@ -45,12 +45,20 @@ export default function Products() {
       link: "/pages/products/chocolate-bar-boxes"
     },
     {
-      title: "Magnetic Closure Boxes",
-      alt_title: "Packaging Folding Cartons",
-      image: "/images/magnetic-nobg.png", // Updated path
-      description: "Custom printed folding carton boxes, also known as product boxes, are perfect for individual product packaging and lightweight items.",
+      title: "Gable Boxes",
+      alt_title: "Packaging Display Boxes",
+      image: "/images/gable-nobg.png", // Updated path
+      description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/magnetic-colsure-boxes"
+      link: "/pages/products/gable-boxes"
+    },
+    {
+      title: "Soap Boxes",
+      alt_title: "Packaging Display Boxes",
+      image: "/images/soap-nobg.png", // Updated path
+      description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
+      subDescription: "MOQ 100 UNITS",
+      link: "/pages/products/soap-boxes"
     },
     {
       title: "Snowman Gift Boxes",
@@ -59,14 +67,6 @@ export default function Products() {
       description: "Custom printed rigid boxes, also known as gift boxes, are perfect for high end or luxury products to create a premium unboxing experience.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/snowman-gift-boxes"
-    },
-    {
-      title: "6 by 9 Poly Mailers",
-      alt_title: "Packaging Drawer Boxes",
-      image: "/Images/polimailer-nobg.png", // Updated path
-      description: "Showcase your products in an elegant way with rigid drawer boxes. Use a ribbon pull tab or a custom thumb notch for a seamless sliding drawer experience.",
-      subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/six-by-nine-poly-mailers"
     },
     {
       title: "Custom Pouch Bags",
@@ -93,37 +93,28 @@ export default function Products() {
       link: "/pages/products/truck-boxes"
     },
     {
-      title: "Rigid Boxes",
-      alt_title: "Packaging Custom Box Dividers",
-      image: "/images/rigid-nobg.png", // Updated path
-      description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
+      title: "Magnetic Closure Boxes",
+      alt_title: "Packaging Folding Cartons",
+      image: "/images/magnetic-nobg.png", // Updated path
+      description: "Custom printed folding carton boxes, also known as product boxes, are perfect for individual product packaging and lightweight items.",
       subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/rigid-boxes"
-
+      link: "/pages/products/magnetic-colsure-boxes"
+    },
+    {
+      title: "6 by 9 Poly Mailers",
+      alt_title: "Packaging Drawer Boxes",
+      image: "/Images/polimailer-nobg.png", // Updated path
+      description: "Showcase your products in an elegant way with rigid drawer boxes. Use a ribbon pull tab or a custom thumb notch for a seamless sliding drawer experience.",
+      subDescription: "MOQ 100 UNITS",
+      link: "/pages/products/six-by-nine-poly-mailers"
     },
     {
       title: "Kraft Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/kraft-nobg.png", // Updated path
+      image: "/images/kraft-nobg4.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/kraft-boxes"
-    },
-    {
-      title: "Gable Boxes",
-      alt_title: "Packaging Display Boxes",
-      image: "/images/gable-nobg.png", // Updated path
-      description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
-      subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/gable-boxes"
-    },
-    {
-      title: "Soap Boxes",
-      alt_title: "Packaging Display Boxes",
-      image: "/images/soap-nobg.png", // Updated path
-      description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
-      subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/soap-boxes"
     },
     {
       title: "Candle Boxes",
@@ -133,6 +124,16 @@ export default function Products() {
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/candle-boxes"
     },
+    {
+      title: "Rigid Boxes",
+      alt_title: "Packaging Custom Box Dividers",
+      image: "/images/rigid-nobg.png", // Updated path
+      description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
+      subDescription: "MOQ 100 UNITS",
+      link: "/pages/products/rigid-boxes"
+
+    },
+    
   ];
 
   // Filter products based on the search query
@@ -193,20 +194,20 @@ export default function Products() {
                 <header className="flex justify-center mb-3"> {/* Centering the product title */}
                   <h3 className="font-bold">{product.title}</h3>
                 </header>
-                <figure className="h-100 overflow-hidden"> {/* Uniform height for image container */}
+                <figure className="relative w-full h-61 overflow-hidden flex items-center justify-center"> {/* Uniform height for image container */}
                   <Image 
                     src={product.image}
                     alt={product.alt_title}
                     width={300}
-                    height={400} // Increased height for the image container
+                    height={500} // Increased height for the image container
                     className="w-full h-full object-cover mb-2" // Ensure the image covers the container
                   />
                 </figure>
-                <div className="h-32 overflow-hidden"> {/* Fixed height for description container */}
+                <div className="h-32 overflow-hidden mt-20"> {/* Fixed height for description container */}
                   <p className="overflow-hidden" style={{ maxHeight: '3em', display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden', WebkitLineClamp: 2 }}>
                     {product.description}
                   </p> {/* Truncate long descriptions after a specific number of lines */}
-                  <p className="text-gray-500 mt-3">{product.subDescription}</p> {/* Display full sub-descriptions without truncation */}
+                  <p className="text-gray-500 mt-30">{product.subDescription}</p> {/* Display full sub-descriptions without truncation */}
                 </div>
                 <footer>
                   <Link href={product.link}> {/* Dynamically link to the product's page */}

@@ -8,29 +8,29 @@ import React, { useState } from 'react';
 const faqData = [
   {
     question: "What are your lead times?",
-    answer: "Production typically takes 12–16 days, and 16–21 days for larger volume orders. Shipping times will depend on the shipping channel you choose. Read more about the full process here.",
+    answer: "Production typically takes 10–14 days, and 16–21 days for larger volume orders. Shipping times will depend on the shipping channel you choose. Read more about the full process here.",
     linkText: "Read more about the full process here.",
     linkUrl: "#"
   },
   {
-    question: "How long does shipping take?",
-    answer: "Air freight options range from 7-21 days, while ocean freight options range from 26-71 days. If you need some packaging expedited earlier, consider splitting your shipment between air and ocean!"
+    question: "Do you provide free samples",
+    answer: "We only give free 3D mockups so you can check the design and dimensions of the boxes before you place an order"
   },
   {
-    question: "Where is your packaging produced?",
-    answer: "Our packaging is produced with our vetted network of suppliers in the USA, UK, and China and shipped directly to your destination."
+    question: "Do you provide free dieline templates?",
+    answer: "Yes. You can get free dielines and free design support from us. We can create customized designs for your packaging so it stands out from other brands"
   },
   {
     question: "What is your minimum order quantity (MOQ)?",
-    answer: "100 units. The MOQ is based on every unique box (e.g., size, design)."
+    answer: "You can order as low as 100 boxes. Before you place your order, we'll give you free design support to get 3D proof of the boxes we will create for you. 100 boxes minimum but no maximums!"
   },
   {
-    question: "Can I purchase a sample before placing an order?",
-    answer: "Absolutely! We have a range of sample types for different purposes. Whether you're looking to test the size of your box or want to verify colors and artwork, we've got you covered. Explore all sample options here."
+    question: "Is shipping free? What are the turnaround times?",
+    answer: "We offer 100% free shipping all over US. From order placement to delivery, the entire process takes 10-12 business days"
   },
   {
-    question: "Can you provide me with a dieline template?",
-    answer: "Dielines are provided after you've placed your order for a sample or production."
+    question: "How soon do you respond?",
+    answer: "We ensure to respond ASAP but we never take more than 24 hours to reply"
   },
 ];
 
