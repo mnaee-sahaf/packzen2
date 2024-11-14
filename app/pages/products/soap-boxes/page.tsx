@@ -96,7 +96,7 @@ export default function CustomPaperBag() {
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <Card className="bg-gray-800 rounded-lg w-4/5 h-4/5 p-6 flex flex-col items-center">
           <div className="text-center text-white text-xl font-bold mb-2">
-            packeeze
+            Packeeze
           </div>
           <div className="text-center text-white mb-8">
             Custom Packaging Simplified

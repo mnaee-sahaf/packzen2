@@ -11,17 +11,17 @@ export function Testimonials() {
   // Mock testimonial data - in production, this would come from an API
   const testimonials = [
     {
-      text: "Packzen has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
+      text: "packeeze has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
       author: "Jane Doe",
       role: "CEO, Brand Inc."
     },
     {
-      text: "Packzen has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
+      text: "packeeze has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
       author: "Jane Doe",
       role: "CEO, Brand Inc."
     },
     {
-      text: "Packzen has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
+      text: "packeeze has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.",
       author: "Jane Doe",
       role: "CEO, Brand Inc."
     }

@@ -1,4 +1,4 @@
-# PackZen Landing Page Structure
+# packeeze Landing Page Structure
 
 ## Component Organization
 - `app/page.tsx`: Main landing page component

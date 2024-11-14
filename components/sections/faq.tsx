@@ -43,7 +43,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="w-full py-8 md:py-12 lg:py-16 xl:py-24 bg-[#F9FAFB]">
+    <div className="w-full py-8 md:py-12 lg:py-16 xl:py-24">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-semibold text-center mb-12">Frequently Asked Questions</h2>
         <div className="grid md:grid-cols-2 gap-8">
