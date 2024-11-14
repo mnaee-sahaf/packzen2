@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
@@ -55,6 +57,13 @@ export function ProductCategories() {
           {productCategories.map(({ name, image }) => {
             console.log(`[ProductCategories] Rendering category: ${name}`)
             
+            const handleClick = () => {
+              // Trigger haptic feedback
+              if (navigator.vibrate) {
+                navigator.vibrate(50); // Vibrate for 50 milliseconds
+              }
+            };
+
             return (
               <Link href={`/pages/products/${name.toLowerCase().replace(' ', '-')}`} key={name}>
                 {/* 
@@ -62,7 +71,7 @@ export function ProductCategories() {
                   - Maintains aspect ratio
                   - Handles overflow for animations
                 */}
-                <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <div className="relative overflow-hidden rounded-lg shadow-lg" onClick={handleClick}>
                   <Image
                     src={image} // Use custom image for each category
                     alt={name}
@@ -72,8 +81,8 @@ export function ProductCategories() {
                   />
                   {/* Overlay with reduced opacity effect */}
                   <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity bg-opacity-10" /> {/* Reduced opacity from 40 to 20 */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
+                  <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-center mb-4"> {/* Adjusted to position at the bottom */}
+                    <h3 className="text-2xl font-bold text-white mb-2">{name}</h3> {/* Adjusted margin for better spacing */}
                     <div className="w-32 h-32">
                     </div>
                   </div>

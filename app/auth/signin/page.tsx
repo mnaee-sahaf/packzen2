@@ -1,71 +1,72 @@
 'use client';
 
-import { useState, useEffect } from "react";
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Package } from "lucide-react";
+// import { useState, useEffect} from "react";
+// import { signIn, useSession } from "next-auth/react";
+// import { useRouter } from "next/navigation";
+// import Link from "next/link";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Package } from "lucide-react";
 
 export default function SignIn() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  // const router = useRouter();
+  // const { data: session, status } = useSession();
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string>('');
   
 
-  useEffect(() => {
-    console.log('[SignIn] Session status:', status);
-    console.log('[SignIn] Session data:', session);
+  // useEffect(() => {
+  //   console.log('[SignIn] Session status:', status);
+  //   console.log('[SignIn] Session data:', session);
 
-    if (status === 'authenticated') {
-        console.log('[SignIn] Authenticated, redirecting to dashboard');
-        router.push('/dashboard');
-      }      
-  }, [status, session]);
+  //   if (status === 'authenticated') {
+  //       console.log('[SignIn] Authenticated, redirecting to dashboard');
+  //       router.push('/dashboard');
+  //     }      
+  // }, [status, session]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('[SignIn] Form submission started');
-    setIsLoading(true);
-    setError('');
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   console.log('[SignIn] Form submission started');
+  //   setIsLoading(true);
+  //   setError('');
 
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get('email') as string;
-    const password = formData.get('password') as string;
+  //   const formData = new FormData(e.currentTarget);
+  //   const email = formData.get('email') as string;
+  //   const password = formData.get('password') as string;
 
-    try {
-      console.log('[SignIn] Attempting sign in with email:', email);
-      const result = await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
-      });
+  //   try {
+  //     console.log('[SignIn] Attempting sign in with email:', email);
+  //     const result = await signIn('credentials', {
+  //       email,
+  //       password,
+  //       redirect: false,
+  //     });
 
-      console.log('[SignIn] Sign in result:', result);
+  //     console.log('[SignIn] Sign in result:', result);
 
-      if (result?.error) {
-        console.error('[SignIn] Error:', result.error);
-        setError('Invalid credentials');
-        return;
-      }
+  //     if (result?.error) {
+  //       console.error('[SignIn] Error:', result.error);
+  //       setError('Invalid credentials');
+  //       return;
+  //     }
 
-      if (result?.ok) {
-        console.log('[SignIn] Success, redirecting to dashboard');
-        router.push('/dashboard');
-      }      
-    } catch (err) {
-      console.error('[SignIn] Error:', err);
-      setError('An error occurred');
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     if (result?.ok) {
+  //       console.log('[SignIn] Success, redirecting to dashboard');
+  //       router.push('/dashboard');
+  //     }      
+  //   } catch (err) {
+  //     console.error('[SignIn] Error:', err);
+  //     setError('An error occurred');
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="w-full max-w-md space-y-8">
+      HELLO
+      {/* <div className="w-full max-w-md space-y-8">
         <div className="flex flex-col items-center">
           <div className="rounded-full bg-blue-600 p-2">
             <Package className="h-8 w-8 text-white" />
@@ -131,7 +132,7 @@ export default function SignIn() {
             {isLoading ? 'Signing in...' : 'Sign in'}
           </Button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }
