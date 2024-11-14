@@ -3,6 +3,16 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from 'lucide-react'
 
+// Product categories with corresponding images
+const productCategories = [
+  { name: 'Tuck Boxes', image: '/images/tuck.png' },
+  { name: 'Rigid Boxes', image: '/images/rigid.jpg' },
+  { name: 'Kraft Boxes', image: '/images/kraft.png' },
+  { name: 'Gable Boxes', image: '/images/gable.png' },
+  { name: 'Soap Boxes', image: '/images/soap.jpg' },
+  { name: 'Candle Boxes', image: '/images/candle.jpg' },
+];
+
 /**
  * Product Categories Grid Component
  * 
@@ -19,16 +29,13 @@ import { ChevronRight } from 'lucide-react'
  *    - Maintains consistent gap spacing
  * 
  * 3. Interactive UI:
- *    - Hover effects using group-hover:
- *    - Image scale animation on hover
+ *    - Images are always visible
  *    - Opacity transitions for smooth effects
  * 
  * 4. Performance:
  *    - Image optimization with Next.js Image
- *    - Conditional rendering for hover states
  *    - Efficient DOM updates with keys
  */
-
 
 export function ProductCategories() {
   // Development logging for component lifecycle
@@ -37,7 +44,7 @@ export function ProductCategories() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-blue-600">Our Product Categories</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-blue-600">Popular Products</h2>
         {/* 
           Responsive Grid Layout:
           - Mobile: 1 column
@@ -45,43 +52,36 @@ export function ProductCategories() {
           - Desktop: 3 columns (lg:grid-cols-3)
         */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {['Boxes', 'Mailers', 'Bags', 'Food Packaging', 'Retail Packaging', 'Accessories'].map((category) => {
-            console.log(`[ProductCategories] Rendering category: ${category}`)
+          {productCategories.map(({ name, image }) => {
+            console.log(`[ProductCategories] Rendering category: ${name}`)
             
             return (
-              <Link href={`/products#${category.toLowerCase().replace(' ', '-')}`} key={category}>
+              <Link href={`/pages/products/${name.toLowerCase().replace(' ', '-')}`} key={name}>
                 {/* 
                   Card Container:
-                  - Uses group for hover targeting
                   - Maintains aspect ratio
                   - Handles overflow for animations
                 */}
-                <div className="group relative overflow-hidden rounded-lg shadow-lg">
+                <div className="relative overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src={`/placeholder.svg?height=300&width=400`}
-                    alt={category}
+                    src={image} // Use custom image for each category
+                    alt={name}
                     width={400}
                     height={300}
-                    className="object-cover w-full h-48 transition-transform group-hover:scale-105"
+                    className="object-cover w-full h-48" // Ensure the image is always visible
                   />
-                  {/* Overlay with hover effect */}
-                  <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity group-hover:bg-opacity-40" />
+                  {/* Overlay with reduced opacity effect */}
+                  <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity bg-opacity-10" /> {/* Reduced opacity from 40 to 20 */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <h3 className="text-2xl font-bold text-white mb-4">{category}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
                     <div className="w-32 h-32">
                     </div>
                   </div>
                   {/* 
                     Call-to-action button:
-                    - Appears on hover using opacity
                     - Positioned absolutely within card
                     - Includes icon for visual hierarchy
                   */}
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Button variant="secondary" size="sm" className="bg-blue-600 text-white hover:bg-blue-700">
-                      Explore <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
                 </div>
               </Link>
             )
