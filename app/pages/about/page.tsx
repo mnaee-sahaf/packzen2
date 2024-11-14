@@ -13,7 +13,6 @@ export default function About() {
         Drop a line by shooting us a mail or book a meeting with our packaging specialists to get packaging your customers will love!
         </p>
       </div>
-      <VideoSection />
     </div>
   );
 }
