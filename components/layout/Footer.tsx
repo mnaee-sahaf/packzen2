@@ -6,13 +6,13 @@ export function Footer() {
       <p className="text-xs text-[#64748B]">© 2024 Packzen. All rights reserved.</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <Link className="text-xs text-[#64748B] hover:text-blue-600 transition-colors" href="/legal/terms">
-          Terms of Service
+          Contact Us
         </Link>
         <Link className="text-xs text-[#64748B] hover:text-blue-600 transition-colors" href="/legal/privacy">
           Privacy Policy
         </Link>
         <Link className="text-xs text-[#64748B] hover:text-blue-600 transition-colors" href="/legal/cookies">
-          Cookie Policy
+          Sitemap
         </Link>
         <Link className="text-xs text-[#64748B] hover:text-blue-600 transition-colors" href="/about">
           About Us

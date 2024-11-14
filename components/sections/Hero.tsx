@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 /**
  * Hero Section Component
@@ -56,16 +55,19 @@ export function Hero() {
             {/* Lead Capture Form */}
             <div className="w-full max-w-sm space-y-2">
               <form className="flex space-x-2">
-                <Input 
+                {/* <Input 
                   className="max-w-lg flex-1 bg-white text-[#0F172A]" 
                   placeholder="Enter your email" 
                   type="email"
                   aria-label="Email address"
-                />
+                /> */}
                 <Button 
-                  type="submit" 
+                  type="button"
                   className="bg-blue-600 text-white hover:bg-blue-700"
-                  onClick={() => console.log('[Hero] Form submitted')}
+                  onClick={() => {
+                    console.log('[Hero] Form submitted');
+                    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScZssQngbYTcIozlKWjiys3LymnlYKwMc_Mmcc_ANpr5A9gjA/viewform?usp=pp_url';
+                  }}
                 >
                   Get a Quote
                 </Button>
