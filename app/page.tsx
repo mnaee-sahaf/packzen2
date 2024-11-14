@@ -6,13 +6,14 @@ import { LowerHero } from '@/components/sections/lowerHero'
 import { Features } from '@/components/sections/features'
 
 export default function HomePage() {
+  //has to work
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        <Hero />
+        <Hero/>
         <Features/>
-        <ProductCategories />
-        <VideoSection />
+        <ProductCategories/>
+        <VideoSection/>
         <FAQ/>
         <LowerHero/>
       </main>
