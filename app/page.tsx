@@ -1,3 +1,5 @@
+'use client';
+
 import FAQ from '@/components/sections/faq'
 import { LowerHero } from '@/components/sections/lowerHero'
 import { Features } from '@/components/sections/features'
