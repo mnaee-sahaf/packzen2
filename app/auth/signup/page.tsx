@@ -1,122 +1,138 @@
-// 'use client';
+'use client';
 
-// import { useState } from "react";
-// import Link from "next/link";
+// import { useState, useEffect} from "react";
+// import { signIn, useSession } from "next-auth/react";
 // import { useRouter } from "next/navigation";
+// import Link from "next/link";
 // import { Button } from "@/components/ui/button";
 // import { Input } from "@/components/ui/input";
-// import type { AuthError, SignUpData } from "@/types/auth";
+// import { Package } from "lucide-react";
 
+export default function SignUp() {
+  // const router = useRouter();
+  // const { data: session, status } = useSession();
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string>('');
+  
 
-// export default function SignUp() {
-//   const router = useRouter();
-//   const [formData, setFormData] = useState({
-//     email: "",
-//     password: "",
-//     confirmPassword: ""
-//   });
-//   const [error, setError] = useState<AuthError | null>(null);
-//   const [loading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   console.log('[SignIn] Session status:', status);
+  //   console.log('[SignIn] Session data:', session);
 
-//   const validateForm = () => {
-//     if (!formData.email || !formData.password || !formData.confirmPassword) {
-//       setError({ message: "All fields are required" });
-//       return false;
-//     }
-//     if (formData.password !== formData.confirmPassword) {
-//       setError({ message: "Passwords do not match" });
-//       return false;
-//     }
-//     if (formData.password.length < 8) {
-//       setError({ message: "Password must be at least 8 characters" });
-//       return false;
-//     }
-//     return true;
-//   };
+  //   if (status === 'authenticated') {
+  //       console.log('[SignIn] Authenticated, redirecting to dashboard');
+  //       router.push('/dashboard');
+  //     }      
+  // }, [status, session]);
 
-//   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     setError(null);
-    
-//     if (!validateForm()) return;
-    
-//     setLoading(true);
-//     try {
-//       const response = await fetch('/api/auth/signup', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//           email: formData.email,
-//           password: formData.password,
-//         }),
-//       });
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   console.log('[SignIn] Form submission started');
+  //   setIsLoading(true);
+  //   setError('');
 
-//       const data = await response.json();
+  //   const formData = new FormData(e.currentTarget);
+  //   const email = formData.get('email') as string;
+  //   const password = formData.get('password') as string;
 
-//       if (!response.ok) {
-//         throw new Error(data.message || 'Sign up failed');
-//       }
+  //   try {
+  //     console.log('[SignIn] Attempting sign in with email:', email);
+  //     const result = await signIn('credentials', {
+  //       email,
+  //       password,
+  //       redirect: false,
+  //     });
 
-//       router.push('/auth/signin?registered=true');
-//     } catch (err) {
-//       setError({ 
-//         message: err instanceof Error ? err.message : 'An error occurred during sign up'
-//       });
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
+  //     console.log('[SignIn] Sign in result:', result);
 
-//   return (
-//     <div className="flex min-h-screen flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-//       <div className="w-full max-w-md space-y-8">
-//         <div className="text-center">
-//           <h1 className="text-2xl font-bold">Create your account</h1>
-//           <p className="mt-2 text-sm text-gray-600">
-//             Already have an account?{' '}
-//             <Link href="/auth/signin" className="text-blue-600 hover:text-blue-500">
-//               Sign in
-//             </Link>
-//           </p>
-//         </div>
+  //     if (result?.error) {
+  //       console.error('[SignIn] Error:', result.error);
+  //       setError('Invalid credentials');
+  //       return;
+  //     }
 
-//         {error && (
-//           <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded">
-//             {error.message}
-//           </div>
-//         )}
+  //     if (result?.ok) {
+  //       console.log('[SignIn] Success, redirecting to dashboard');
+  //       router.push('/dashboard');
+  //     }      
+  //   } catch (err) {
+  //     console.error('[SignIn] Error:', err);
+  //     setError('An error occurred');
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
-//         <form onSubmit={handleSubmit} className="space-y-6">
-//           <Input
-//             type="email"
-//             placeholder="Email address"
-//             value={formData.email}
-//             onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-//             disabled={loading}
-//           />
-//           <Input
-//             type="password"
-//             placeholder="Password"
-//             value={formData.password}
-//             onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-//             disabled={loading}
-//           />
-//           <Input
-//             type="password"
-//             placeholder="Confirm password"
-//             value={formData.confirmPassword}
-//             onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-//             disabled={loading}
-//           />
-//           <Button
-//             type="submit"
-//             className="w-full"
-//             disabled={loading}
-//           >
-//             {loading ? 'Creating account...' : 'Create account'}
-//           </Button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      HELLO
+      {/* <div className="w-full max-w-md space-y-8">
+        <div className="flex flex-col items-center">
+          <div className="rounded-full bg-blue-600 p-2">
+            <Package className="h-8 w-8 text-white" />
+          </div>
+          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+            Sign in to your account
+          </h2>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Or{' '}
+            <Link href="/auth/signup" className="font-medium text-blue-600 hover:text-blue-500">
+              create a new account
+            </Link>
+          </p>
+        </div>
+
+        {error && (
+          <div className="rounded-md bg-red-50 p-4">
+            <div className="flex">
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-red-800">{error}</h3>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <div className="space-y-4 rounded-md shadow-sm">
+            <div>
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className="relative block w-full"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
+              <Input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                className="relative block w-full"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+
+          <Button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Signing in...' : 'Sign in'}
+          </Button>
+        </form>
+      </div> */}
+    </div>
+  );
+}
