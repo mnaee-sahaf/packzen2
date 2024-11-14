@@ -63,7 +63,7 @@ export function Header() {
         </DropdownMenu>
 
         <DropdownMenu> 
-          <DropdownMenuTrigger className="text-sm font-medium text-[#64748B] hover:text-blue-600"><Link href="/about">About Us</Link></DropdownMenuTrigger> 
+          <DropdownMenuTrigger className="text-sm font-medium text-[#64748B] hover:text-blue-600"><Link href="/pages/about">About Us</Link></DropdownMenuTrigger> 
           {/* <DropdownMenuPortal>
             <DropdownMenuContent className="w-48">
               <DropdownMenuItem asChild><Link href="/Boxes-by-style/Tuck-Boxes">Tuck Boxes</Link></DropdownMenuItem>
@@ -87,7 +87,8 @@ export function Header() {
         <Button 
                 onClick={() => window.open('https://calendly.com/meatdaraz/30min', '_blank')} 
                 className="bg-blue-600 text-white hover:bg-blue-700">
-                Book A Video Consultation
+                        <Phone className="h-4 w-4" />
+                        <span>Book A Video Consultation</span>
               </Button>
       </nav>
 
@@ -134,7 +135,8 @@ export function Header() {
               <Button 
                 onClick={() => window.open('https://calendly.com/meatdaraz/30min', '_blank')} 
                 className="bg-blue-600 text-white hover:bg-blue-700 w-1/2">
-                Book A Video Consultation
+               <Phone className="h-4 w-4" />
+               <span>Book A Video Consultation</span>
               </Button>
               </div>
             </nav>

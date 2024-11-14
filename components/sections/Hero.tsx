@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import { ArrowRight } from 'lucide-react';
 
 /**
  * Hero Section Component
@@ -41,7 +42,7 @@ export function Hero() {
   console.log('[Hero] Component mounted')
 
   return (
-    <section className="w-full py-4 md:py-8 lg:py-16 xl:py-24 bg-[#F9FAFB]">
+    <section className="w-full py-4 md:py-8 lg:py-16 xl:py-24 bg-[#F9FAFB] mt-16"> {/* Added margin-top to prevent header obstruction */}
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-left">
           {/* Content Column */}
@@ -53,26 +54,14 @@ export function Hero() {
               Elevate your brand with eco-friendly, customizable packaging. Fast, easy, and affordable.
             </p>
             {/* Lead Capture Form */}
-            <div className="w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                {/* <Input 
-                  className="max-w-lg flex-1 bg-white text-[#0F172A]" 
-                  placeholder="Enter your email" 
-                  type="email"
-                  aria-label="Email address"
-                /> */}
-                <Button 
-                  type="button"
-                  className="bg-blue-600 text-white hover:bg-blue-700"
-                  onClick={() => {
-                    console.log('[Hero] Form submitted');
-                    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScZssQngbYTcIozlKWjiys3LymnlYKwMc_Mmcc_ANpr5A9gjA/viewform?usp=pp_url';
-                  }}
-                >
-                  Get a Quote
-                </Button>
-              </form>
-            </div>
+            <div className="w-full max-w-md">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZssQngbYTcIozlKWjiys3LymnlYKwMc_Mmcc_ANpr5A9gjA/viewform?usp=pp_url">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center w-full space-x-2 py-3 text-lg font-semibold transition">
+                <span>Get A Quote</span>
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
+          </div>
           </div>
           {/* Image Container */}
           <div className="mt-4 lg:mt-0">
