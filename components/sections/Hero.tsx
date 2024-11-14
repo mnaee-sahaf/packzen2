@@ -66,7 +66,7 @@ export function Hero() {
           {/* Image Container */}
           <div className="mt-4 lg:mt-0">
             <Image
-              src="/nbg.png"
+              src="/images/homepage3_nobg.png"
               alt="Sustainable Packaging"
               width={400}
               height={250}

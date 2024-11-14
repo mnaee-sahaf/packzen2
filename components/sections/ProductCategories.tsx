@@ -5,12 +5,12 @@ import { ChevronRight } from 'lucide-react'
 
 // Product categories with corresponding images
 const productCategories = [
-  { name: 'Tuck Boxes', image: '/images/gable-boxes.jpg' },
-  { name: 'Rigid Boxes', image: '/images/gable-boxes.jpg' },
-  { name: 'Kraft Boxes', image: '/kraft.webp' },
-  { name: 'Gable Boxes', image: '/app/assets/mylar.webp' },
-  { name: 'Soap Boxes', image: '/images/soap-boxes.jpg' },
-  { name: 'Candle Boxes', image: '/images/gable-boxes.jpg' },
+  { name: 'Tuck Boxes', image: '/images/tuck.png' },
+  { name: 'Rigid Boxes', image: '/images/rigid.jpg' },
+  { name: 'Kraft Boxes', image: '/images/kraft.png' },
+  { name: 'Gable Boxes', image: '/images/gable.png' },
+  { name: 'Soap Boxes', image: '/images/soap.jpg' },
+  { name: 'Candle Boxes', image: '/images/candle.jpg' },
 ];
 
 /**
@@ -56,7 +56,7 @@ export function ProductCategories() {
             console.log(`[ProductCategories] Rendering category: ${name}`)
             
             return (
-              <Link href={`/products#${name.toLowerCase().replace(' ', '-')}`} key={name}>
+              <Link href={`/pages/products/${name.toLowerCase().replace(' ', '-')}`} key={name}>
                 {/* 
                   Card Container:
                   - Maintains aspect ratio
@@ -70,8 +70,8 @@ export function ProductCategories() {
                     height={300}
                     className="object-cover w-full h-48" // Ensure the image is always visible
                   />
-                  {/* Overlay with opacity effect */}
-                  <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity bg-opacity-40" />
+                  {/* Overlay with reduced opacity effect */}
+                  <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity bg-opacity-10" /> {/* Reduced opacity from 40 to 20 */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
                     <div className="w-32 h-32">

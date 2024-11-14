@@ -39,7 +39,7 @@ export default function Products() {
     {
       title: "Chocolate Bar Boxes",
       alt_title: "Packaging Mailer Boxes",
-      image: "/kraft.webp", // Updated path
+      image: "/images/choco-nobg.png", // Updated path
       description: "Corrugated mailer boxes are perfect for eCommerce packaging and shipping, giving your customers an exciting unboxing experience from the get-go.",
       subDescription: "MOQ 100 UNITS.",
       link: "/pages/products/chocolate-bar-boxes"
@@ -47,7 +47,7 @@ export default function Products() {
     {
       title: "Magnetic Closure Boxes",
       alt_title: "Packaging Folding Cartons",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/magnetic-nobg.png", // Updated path
       description: "Custom printed folding carton boxes, also known as product boxes, are perfect for individual product packaging and lightweight items.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/magnetic-colsure-boxes"
@@ -55,7 +55,7 @@ export default function Products() {
     {
       title: "Snowman Gift Boxes",
       alt_title: "Packaging Ridged Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/Images/snowman-nobg.png", // Updated path
       description: "Custom printed rigid boxes, also known as gift boxes, are perfect for high end or luxury products to create a premium unboxing experience.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/snowman-gift-boxes"
@@ -63,7 +63,7 @@ export default function Products() {
     {
       title: "6 by 9 Poly Mailers",
       alt_title: "Packaging Drawer Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/Images/polimailer-nobg.png", // Updated path
       description: "Showcase your products in an elegant way with rigid drawer boxes. Use a ribbon pull tab or a custom thumb notch for a seamless sliding drawer experience.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/six-by-nine-poly-mailers"
@@ -71,7 +71,7 @@ export default function Products() {
     {
       title: "Custom Pouch Bags",
       alt_title: "Packaging Magnetic Rigid Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/Images/pouch-nobg.png", // Updated path
       description: "The ultimate package for luxury. Use custom magnetic closure boxes to elevate the value of your products and provide a premium brand experience",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/custom-pouch-bags"
@@ -79,7 +79,7 @@ export default function Products() {
     {
       title: "Small Cosmetic Boxes",
       alt_title: "Packaging Custom Box Inserts",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/Images/cosmetic-nobg.png", // Updated path
       description: "Present products beautifully in custom box inserts that are moulded to the shape of your products for a secure and snug fit.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/small-cosmetic-boxes"
@@ -87,7 +87,7 @@ export default function Products() {
     {
       title: "Tuck Boxes",
       alt_title: "Packaging Custom Foam Inserts",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/tuck-nobg.png", // Updated path
       description: "Showcase your products elegantly and protect fragile or delicate products with custom foam inserts.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/truck-boxes"
@@ -95,7 +95,7 @@ export default function Products() {
     {
       title: "Rigid Boxes",
       alt_title: "Packaging Custom Box Dividers",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/rigid-nobg.png", // Updated path
       description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/rigid-boxes"
@@ -104,7 +104,7 @@ export default function Products() {
     {
       title: "Kraft Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/kraft-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/kraft-boxes"
@@ -112,7 +112,7 @@ export default function Products() {
     {
       title: "Gable Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/gable-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/gable-boxes"
@@ -120,7 +120,7 @@ export default function Products() {
     {
       title: "Soap Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/soap-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/soap-boxes"
@@ -128,7 +128,7 @@ export default function Products() {
     {
       title: "Candle Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/products/folding-carton.jpg", // Updated path
+      image: "/images/candle-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/candle-boxes"
@@ -193,13 +193,13 @@ export default function Products() {
                 <header className="flex justify-center mb-3"> {/* Centering the product title */}
                   <h3 className="font-bold">{product.title}</h3>
                 </header>
-                <figure>
+                <figure className="h-100 overflow-hidden"> {/* Uniform height for image container */}
                   <Image 
                     src={product.image}
                     alt={product.alt_title}
                     width={300}
-                    height={250} // Increased height for the image container
-                    className="w-full h-55 object-cover mb-2" // Increased height for the image display
+                    height={400} // Increased height for the image container
+                    className="w-full h-full object-cover mb-2" // Ensure the image covers the container
                   />
                 </figure>
                 <div className="h-32 overflow-hidden"> {/* Fixed height for description container */}

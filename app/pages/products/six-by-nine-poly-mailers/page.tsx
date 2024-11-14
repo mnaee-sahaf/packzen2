@@ -58,10 +58,10 @@ const CostSummary: React.FC<CostSummaryProps> = ({ estimatedPackaging, estimated
   </div>
 );
 
-export default function CustomPaperBag() {
+export default function CustomSixByNinePolyMailer() {
   const [quantity, setQuantity] = useState('1000 units');
-  const [style, setStyle] = useState('Paper Bag with Rope Handles');
-  const [size, setSize] = useState('5.5 x 2.5 x 4.5 in');
+  const [style, setStyle] = useState('Six by Nine Poly Mailer');
+  const [size, setSize] = useState('6 x 9 in');
   const [print, setPrint] = useState('Printed outside only');
 
   // State for estimated costs
@@ -72,8 +72,8 @@ export default function CustomPaperBag() {
   // Function to calculate costs based on selected quantity
   const calculateCosts = () => {
     const quantityValue = parseInt(quantity.split(' ')[0]);
-    const packagingCostPerUnit = 1;
-    const shippingCostPerUnit = 0.1;
+    const packagingCostPerUnit = 0.5; // Adjusted cost for poly mailers
+    const shippingCostPerUnit = 0.05; // Adjusted cost for shipping
 
     const packaging = quantityValue * packagingCostPerUnit;
     const shipping = quantityValue * shippingCostPerUnit;
@@ -108,13 +108,13 @@ export default function CustomPaperBag() {
 
       {/* Right Side - Product Details */}
       <div className="w-full lg:w-1/2 space-y-6">
-        <h1 className="text-3xl font-bold text-gray-900">Custom Paper Bags</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Custom Six by Nine Poly Mailers</h1>
 
         {/* Style Selection */}
         <SelectOption 
           label="Style" 
           value={style} 
-          options={["Paper Bag with Rope Handles", "Paper Bag with Ribbon Handles"]} 
+          options={["Six by Nine Poly Mailer", "Other Styles"]} 
           onChange={setStyle} 
         />
 
@@ -122,7 +122,7 @@ export default function CustomPaperBag() {
         <SelectOption 
           label="Size" 
           value={size} 
-          options={["5.5 x 2.5 x 4.5 in", "7.5 x 2.5 x 5.5 in", "7.5 x 3.5 x 5.5 in", "7.5 x 4.5 x 5.5 in"]} 
+          options={["6 x 9 in", "8 x 10 in", "10 x 13 in"]} 
           onChange={setSize} 
         />
 
