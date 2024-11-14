@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, FC } from 'react';
 
 type Tab = 'details' | 'specification' | 'artwork' | 'order' | 'sizing' | 'material' | 'print';
