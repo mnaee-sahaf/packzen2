@@ -1,5 +1,3 @@
-import { VideoSection } from '@/components/sections/videoSection';
-import Link from 'next/link';
 
 export default function About() {
   return (
