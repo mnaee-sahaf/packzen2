@@ -63,7 +63,7 @@ const ProductSpecification: FC = () => {
       <div className="text-gray-700">
         {activeTab === 'details' && (
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Fully Customizable Cardboard Boxes</h2>
+            <h2 className="text-2xl font-semibold mb-4">Chocolate Bar Boxes</h2>
             <p className="mb-4">
               Get branded chocolate bar boxes designed for brands who love nothing but packaging perfection. You can choose the right material and pick any customization style you like. Ping us to get a free quote for your packaging needs.
             </p>
