@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import React, { useState, FC } from 'react';
 
@@ -12,9 +12,9 @@ const ProductSpecification: FC = () => {
   };
 
   return (
-    <div className="p-6 font-sans">
+    <div className="p-6 font-sans overflow-hidden">
       {/* Tab Navigation */}
-      <div className="flex space-x-4 border-b border-gray-200 mb-6">
+      <div className="flex space-x-4 border-b border-gray-200 mb-6 overflow-x-auto">
         <button
           className={`py-2 px-4 font-medium ${activeTab === 'details' ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-600'}`}
           onClick={() => handleTabClick('details')}
@@ -65,14 +65,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Fully Customizable Cardboard Boxes</h2>
             <p className="mb-4">
-              As a retail brand, you must know that <strong>cardboard packaging</strong> keeps your products safe. But
-              have you ever considered the potential of <strong>cardboard boxes</strong> to boost brand affinity and win
-              new sales? Research shows that attractive packaging stimulates reward-seeking parts of the brain. These
-              parts are associated with impulse purchasing!
-            </p>
-            <p className="mb-4">
-              Here at Refine Packaging, we're passionate about empowering brands to supercharge their marketing and sales
-              strategies through the power of packaging. Our personalized boxes are a great, cost-effective way to do it.
+              Get branded chocolate bar boxes designed for brands who love nothing but packaging perfection. You can choose the right material and pick any customization style you like. Ping us to get a free quote for your packaging needs.
             </p>
           </section>
         )}
@@ -81,12 +74,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Specification</h2>
             <p className="mb-4">
-              Our lightweight, highly customizable cardboard boxes are designed to make your products stand out. With rich digital
-              printing options and various sizes and styles available, anything is possible.
-            </p>
-            <p className="mb-4">
-              Our experts are here to help you through every step of the order process to ensure that your custom packaging needs
-              are met efficiently and effectively.
+              You can get custom bar boxes in any shape or size. The best option is tuck packaging style as it looks stylish and provides a great unboxing experience. Got something else in mind? Just let us know and we’ll create the design 100% free for you!
             </p>
           </section>
         )}
@@ -95,8 +83,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Artwork Guidelines</h2>
             <p className="mb-4">
-              We offer a range of options for digital printing, including CMYK and RGB color models, as well as Pantone color matching.
-              Our team will guide you in preparing your artwork to fit our packaging templates.
+              You can provide us with a logo or dieline to get started. Got a logo but don’t have packaging design ready? Avail our 100% free design services to get branded packaging for your brand at no additional costs.
             </p>
           </section>
         )}
@@ -105,8 +92,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Order Process</h2>
             <p className="mb-4">
-              Place your order with ease! Our team will work with you to confirm all design details, sizes, and specifications. Once
-              you approve, we move into production and keep you updated every step of the way.
+              Just send your packaging requirements or schedule a call with our packaging expert. We’ll share you 3D proof of boxes before you proceed with the payment. And you’ll get boxes shipped at your doorstep within 10-12 days at your doorstep. Shipping is on us and we’ll cover 100% of the shipping charges!
             </p>
           </section>
         )}
@@ -115,8 +101,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Custom Sizing</h2>
             <p className="mb-4">
-              We offer a variety of sizes to fit your product needs. From small to large, our boxes are fully customizable to give your
-              products the perfect fit and finish.
+              Don’t like the stock box sizes? We neither. Just share your packaging size requirements with us and we’ll create free 3D mockups for you. Once you lock the dimensions, we will move ahead to materialize your packaging dreams into reality. 
             </p>
           </section>
         )}
@@ -125,8 +110,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Material</h2>
             <p className="mb-4">
-              Our corrugated fiberboard provides the ideal balance of strength and lightweight design. It protects your products while
-              minimizing shipping costs.
+              You can use kraft, cardstock, or cardboard for custom chocolate bar boxes. All the materials are sturdy and good for printing. Or you can choose paperboard to get luxury rigid boxes for your amazing chocolate brand!
             </p>
           </section>
         )}
@@ -135,8 +119,7 @@ const ProductSpecification: FC = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Print</h2>
             <p className="mb-4">
-              With advanced digital printing options, we offer fast and affordable printing solutions that can meet any design needs.
-              Our boxes ship flat for easy handling and quick assembly.
+              You can rely on offset printing to get high-quality chocolate bar boxes. This printing method ensures that ink pops on boxes and you can win the hearts of your customers. You can customize chocolate bar boxes with embossing/debossing, silver/gold foiling, or any customization style you like!
             </p>
           </section>
         )}

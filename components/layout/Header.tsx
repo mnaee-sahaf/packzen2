@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Package, Phone, Menu, X } from 'lucide-react';
+import Clarity from '@microsoft/clarity';
 // import { useSession } from "next-auth/react";
 // import { useRouter } from 'next/navigation';
 import { 

@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button'; // Corrected import statement for Button
 import { Switch } from '@radix-ui/react-switch';
 import { Label } from '@radix-ui/react-label';
+import TawkToScript from '@/components/sections/tawkToScript';
+
 
 export default function Products() {
   console.log("Rendering Products component");
@@ -101,7 +103,7 @@ export default function Products() {
       image: "/Images/magnetic-nobg.png", // Updated path
       description: "Custom printed folding carton boxes, also known as product boxes, are perfect for individual product packaging and lightweight items.",
       subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/magnetic-colsure-boxes"
+      link: "/pages/products/magnetic-box"
     },
     {
       title: "6 by 9 Poly Mailers",
@@ -148,6 +150,7 @@ export default function Products() {
 
   return (
     <div className="flex flex-col min-h-screen">      
+     <TawkToScript/>  
       <main className="container mx-auto p-4 flex-1 mt-16">
         <h1 className="text-3xl font-bold mb-4">Our Products</h1>
         <p className="mb-4">Explore our range of products.</p>

@@ -8,10 +8,10 @@ export function LowerHero() {
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div className="max-w-2xl space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-              Ready to <span className="text-blue-600">elevate</span> your packaging?
+            Ready to get <span className="text-blue-600">unmatched </span> packaging? 
             </h2>
             <p className="max-w-md mx-auto text-gray-600 text-lg md:text-xl lg:text-lg">
-              Join thousands of businesses that trust Packeeze for their custom branded packaging needs.
+            Share your packaging requirements and get a quote to order packaging your customers will love!
             </p>
           </div>
           <div className="w-full max-w-md">

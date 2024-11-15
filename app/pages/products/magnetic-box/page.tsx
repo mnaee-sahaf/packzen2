@@ -5,7 +5,7 @@ import TawkToScript from '@/components/sections/tawkToScript';
 import Image from 'next/image';
 
 
-export default function CosmeticBoxes() {
+export default function Magentic() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white mt-20">
@@ -17,8 +17,8 @@ export default function CosmeticBoxes() {
         {/* Main Product Image */}
         <div className="relative w-full max-w-md h-96 rounded-lg overflow-hidden">
           <Image
-            src="/Images/cosmetic-nobg.png"
-            alt="Small Cosmetic Boxes"
+            src="/Images/magnetic-nobg.png"
+            alt="Magnetic Boxes"
             layout="fill"
             objectFit="contain"
             className="rounded-lg"
@@ -41,7 +41,7 @@ export default function CosmeticBoxes() {
       {/* Right Section: Product Details and Form */}
       <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
         {/* Product Title */}
-        <h1 className="text-3xl font-bold mb-2">Cosmetic Boxes</h1>
+        <h1 className="text-3xl font-bold mb-2">Magnetic Closure Boxes</h1>
         <div className="flex items-center mb-4">
           {/* Star Rating */}
           <div className="text-red-500 text-lg flex space-x-1">
@@ -53,11 +53,11 @@ export default function CosmeticBoxes() {
         </div>
         {/* Breadcrumb Navigation */}
         <div className="text-sm text-gray-500 mb-4">
-          Home &gt; Industries &gt; Gift Boxes &gt; Cosmetic Boxes
+          Home &gt; Industries &gt; Gift Boxes &gt; Magnetic Closure Boxes
         </div>
         {/* Description */}
         <p className="text-gray-700 mb-6">
-        Get personalized Custom Cosmetic Boxes to sell anything. Sturdy packaging materials with unmatched customization to make your boxes stand out. Get a free quote now!
+        Get personalized Custom Magnetic Closure Boxes to sell anything. Sturdy packaging materials with unmatched customization to make your boxes stand out. Get a free quote now!
         </p>
         {/* Quote Request Form */}
         <form className="bg-gray-100 p-6 rounded-lg shadow-md">

@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Link as LucideLink, Phone } from 'lucide-react' // Rename Link from lucide-react
 import Link from 'next/link' // Import Next.js Link
+import { useEffect } from 'react'
+import TawkToScript from '@/components/sections/tawkToScript';
 
 const productCategories = [
   { name: 'Tuck Boxes', image: '/Images/tuck.png' },
@@ -17,17 +19,18 @@ const productCategories = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen g-white">   
+      <TawkToScript/>    
       <main className="flex-1">
         <section className="w-full py-4 md:py-8 lg:py-16 xl:py-24 bg-[#F9FAFB] mt-16">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-left">
               <div className="flex-1 space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-gray-800">
-                  Custom Packaging Solutions for Your Business
+                Your Brand Deserves the Best Custom Packaging!
                 </h1>
                 <p className="text-[#64748B] md:text-xl">
-                  Elevate your brand with eco-friendly, customizable packaging. Fast, easy, and affordable.
+                Get quality packaging that sets your brand apart. Easy, fast, and reliable packaging. 
                 </p>
                 <div className="w-full max-w-md">
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLScZssQngbYTcIozlKWjiys3LymnlYKwMc_Mmcc_ANpr5A9gjA/viewform?usp=pp_url">
