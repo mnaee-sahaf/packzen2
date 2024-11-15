@@ -27,7 +27,7 @@ export function Features() {
           {/* Feature item */}
           <div className="flex flex-col items-center w-48 text-center space-y-2">
             <Cpu className="w-8 h-8 text-blue-600" />
-            <span className="font-medium text-base sm:text-lg">Competitive Price</span>
+            <span className="font-medium text-base sm:text-lg">Competitive Prices</span>
           </div>
 
         </div>
