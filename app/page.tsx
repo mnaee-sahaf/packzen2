@@ -7,12 +7,12 @@ import { ArrowRight, Link as LucideLink, Phone } from 'lucide-react' // Rename L
 import Link from 'next/link' // Import Next.js Link
 
 const productCategories = [
-  { name: 'Tuck Boxes', image: '/images/tuck.png' },
-  { name: 'Rigid Boxes', image: '/images/rigid.jpg' },
-  { name: 'Kraft Boxes', image: '/images/kraft.png' },
-  { name: 'Gable Boxes', image: '/images/gable.png' },
-  { name: 'Soap Boxes', image: '/images/soap.jpg' },
-  { name: 'Candle Boxes', image: '/images/candle.jpg' },
+  { name: 'Tuck Boxes', image: '/Images/tuck.png' },
+  { name: 'Rigid Boxes', image: '/Images/rigid.jpg' },
+  { name: 'Kraft Boxes', image: '/Images/kraft.png' },
+  { name: 'Gable Boxes', image: '/Images/gable.png' },
+  { name: 'Soap Boxes', image: '/Images/soap.jpg' },
+  { name: 'Candle Boxes', image: '/Images/candle.jpg' },
 ];
 
 export default function HomePage() {
@@ -40,7 +40,7 @@ export default function HomePage() {
               </div>
               <div className="mt-4 lg:mt-0">
                 <Image
-                  src="/images/homepage3_nobg.png"
+                  src="/Images/homepage3_nobg.png"
                   alt="Sustainable Packaging"
                   width={400}
                   height={250}

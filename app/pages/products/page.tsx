@@ -42,7 +42,7 @@ export default function Products() {
     {
       title: "Chocolate Bar Boxes",
       alt_title: "Packaging Mailer Boxes",
-      image: "/images/choco-nobg.png", // Updated path
+      image: "/Images/choco-nobg.png", // Updated path
       description: "Corrugated mailer boxes are perfect for eCommerce packaging and shipping, giving your customers an exciting unboxing experience from the get-go.",
       subDescription: "MOQ 100 UNITS.",
       link: "/pages/products/chocolate-bar-boxes"
@@ -50,7 +50,7 @@ export default function Products() {
     {
       title: "Gable Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/gable-nobg.png", // Updated path
+      image: "/Images/gable-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/gable-boxes"
@@ -58,7 +58,7 @@ export default function Products() {
     {
       title: "Soap Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/soap-nobg.png", // Updated path
+      image: "/Images/soap-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/soap-boxes"
@@ -90,7 +90,7 @@ export default function Products() {
     {
       title: "Tuck Boxes",
       alt_title: "Packaging Custom Foam Inserts",
-      image: "/images/tuck-nobg.png", // Updated path
+      image: "/Images/tuck-nobg.png", // Updated path
       description: "Showcase your products elegantly and protect fragile or delicate products with custom foam inserts.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/truck-boxes"
@@ -98,7 +98,7 @@ export default function Products() {
     {
       title: "Magnetic Closure Boxes",
       alt_title: "Packaging Folding Cartons",
-      image: "/images/magnetic-nobg.png", // Updated path
+      image: "/Images/magnetic-nobg.png", // Updated path
       description: "Custom printed folding carton boxes, also known as product boxes, are perfect for individual product packaging and lightweight items.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/magnetic-colsure-boxes"
@@ -114,7 +114,7 @@ export default function Products() {
     {
       title: "Kraft Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/kraft-nobg4.png", // Updated path
+      image: "/Images/kraft-nobg4.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/kraft-boxes"
@@ -122,7 +122,7 @@ export default function Products() {
     {
       title: "Candle Boxes",
       alt_title: "Packaging Display Boxes",
-      image: "/images/candle-nobg.png", // Updated path
+      image: "/Images/candle-nobg.png", // Updated path
       description: "Convert your custom boxes into counter display packaging that showcases your products. Perfect as retail display boxes in-store or displayed at events.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/candle-boxes"
@@ -130,7 +130,7 @@ export default function Products() {
     {
       title: "Rigid Boxes",
       alt_title: "Packaging Custom Box Dividers",
-      image: "/images/rigid-nobg.png", // Updated path
+      image: "/Images/rigid-nobg.png", // Updated path
       description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/rigid-boxes"
