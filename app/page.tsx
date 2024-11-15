@@ -54,7 +54,7 @@ export default function HomePage() {
         <Features/>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-blue-600">Popular Products</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12"><Link href='/pages/products'>Popular Products</Link></h2>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {productCategories.map(({ name, image }) => (
                 <Link href={`/pages/products/${name.toLowerCase().replace(' ', '-')}`} key={name}>
@@ -87,7 +87,7 @@ export default function HomePage() {
                 <div className="mb-4">
                   <Link href="https://calendly.com/meatdaraz/30min">
                     <Button className="bg-blue-600 text-white hover:bg-blue-700 flex items-center space-x-2">
-                      <Phone className="h-4 w-4" />
+                      <Phone className="h-4 w-4"/>
                       <span>Book A Free Consultation</span>
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
