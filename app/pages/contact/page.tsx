@@ -14,9 +14,9 @@ export default function Contact() {
           You can contact us through the following methods:
         </p>
         <ul className="list-disc pl-5 mt-2">
-          <li><strong>Email:</strong> <a href="mailto:support@example.com" className="text-blue-600 hover:underline">support@example.com</a></li>
-          <li><strong>Phone:</strong> +1 (800) 123-4567</li>
-          <li><strong>Address:</strong> 123 Sustainability St, Green City, EcoLand</li>
+          <li><strong>Email:</strong> <a href="mailto:meatdaraz@gmail.com" className="text-blue-600 hover:underline">support@packeeze.com</a></li>
+          <li><strong>Phone:</strong> +1 (800) 223-0927</li>
+          <li><strong>Address:</strong> Dallas, Texas</li>
         </ul>
       </section>
 
@@ -42,7 +42,7 @@ export default function Contact() {
             <input type="text" placeholder="Product Type" className="border p-2 rounded" required />
           </div>
           <textarea
-            placeholder="Tell us about your project! Box dimensions, industry, design, etc. – we can help."
+            placeholder="Tell us about your project! Box dimensions, industry, design, etc. we can help."
             className="border p-2 rounded w-full mt-4"
             rows={4}
             required
@@ -55,9 +55,7 @@ export default function Contact() {
           </p>
         </form></div>
       </section>
-
-      {/* Go back to Home */}
-      <Link href="/" className="mt-8 text-blue-600 hover:underline">Go back to Home</Link>
+      <button className='mt-5'>   <Link href="/" className="mt-8 text-blue-600 hover:underline">Go back to Home</Link></button>
     </div>
   );
 }
