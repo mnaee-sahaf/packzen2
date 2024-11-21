@@ -21,9 +21,8 @@ export default function KraftBoxes() {
               <Image
                 src="/Images/kraft-nobg.png"
                 alt="Kraft Boxes"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-contain"
               />
             </div>
 

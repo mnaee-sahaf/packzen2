@@ -19,9 +19,8 @@ export default function TuckBoxes() {
           <Image
             src="/Images/tuck-nobg.png"
             alt="Tuck Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

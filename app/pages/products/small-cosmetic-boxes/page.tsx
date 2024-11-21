@@ -19,9 +19,8 @@ export default function CosmeticBoxes() {
           <Image
             src="/Images/cosmetic-nobg.png"
             alt="Small Cosmetic Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

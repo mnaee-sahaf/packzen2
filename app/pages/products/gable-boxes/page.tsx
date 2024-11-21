@@ -19,11 +19,10 @@ export default function GableBoxes() {
             {/* Main Product Image */}
             <div className="relative w-full max-w-md h-96 rounded-lg overflow-hidden">
               <Image
-                src="/Images/choco-nobg.png"
+                src="/Images/gable-nobg.png"
                 alt="Product Image"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-contain"
               />
             </div>
 

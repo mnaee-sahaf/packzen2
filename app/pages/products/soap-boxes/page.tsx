@@ -19,9 +19,8 @@ export default function SoapBoxes() {
           <Image
             src="/Images/soap-nobg.png"
             alt="Saop Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

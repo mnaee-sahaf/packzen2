@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import ProductSpecification from '@/components/sections/productSpecification';
 import TawkToScript from '@/components/sections/tawkToScript';
 import Image from 'next/image';
+import Script from 'next/script';
 
 export default function ChocolateBarBoxes() {
   useEffect(() => {
@@ -30,16 +31,18 @@ export default function ChocolateBarBoxes() {
               <Image
                 src="/Images/choco-nobg.png"
                 alt="Product Image"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-contain"
               />
             </div>
+            <Script src="//embed.typeform.com/next/embed.js" />
 
             {/* Features List */}
             {/* <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 rounded-lg shadow-md bg-gray-100 p-6 mt-10">
               <div>✔️ Starting from Just 100 Boxes</div>
-              <div>✔️ Turnaround in 10-12 Days</div>
+              <div>✔️ Turnaround in 10-12 Days</div>serverRuntimeConfig: {
+                maxHeaderSize: 4096 * 1024, // 4MB should be sufficient
+              },
               <div>✔️ No Die and Plates charges</div>
               <div>✔️ Unmatched Printing Services</div>
               <div>✔️ Best Prices Guaranteed</div>

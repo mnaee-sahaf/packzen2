@@ -19,9 +19,8 @@ export default function Polymailers() {
           <Image
             src="/Images/polimailer-nobg.png"
             alt="Polimailers"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

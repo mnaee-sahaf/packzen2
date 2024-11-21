@@ -19,9 +19,8 @@ export default function RigidBoxes() {
           <Image
             src="/Images/rigid-nobg.png"
             alt="Rigid Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

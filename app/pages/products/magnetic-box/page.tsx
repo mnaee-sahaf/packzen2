@@ -19,9 +19,8 @@ export default function Magentic() {
           <Image
             src="/Images/magnetic-nobg.png"
             alt="Magnetic Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        

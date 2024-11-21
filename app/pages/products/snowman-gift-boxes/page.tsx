@@ -19,9 +19,8 @@ export default function SnowmanBoxes() {
           <Image
             src="/Images/snowman-nobg.png"
             alt="Snowman Boxes"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-contain"
           />
         </div>
        
