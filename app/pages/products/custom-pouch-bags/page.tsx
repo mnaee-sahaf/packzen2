@@ -10,6 +10,8 @@ import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-dat
 import { ProductSize, QuantityOption } from "@/lib/types";
 import FloatingCallButton from '@/components/sections/floatingCallButton';
 import FAQ from '@/components/sections/faq';
+import Image from 'next/image'; // Import Image from next/image
+
  
 const productImages = [
   "/Images/pouch-nobg.png",
@@ -30,10 +32,6 @@ export default function CustomPouchBags() {
       (prevIndex - 1 + productImages.length) % productImages.length
     );
   };
-  
-  if (!productSizes.length || !quantityOptions.length) {
-    return <div>Loading...</div>;
-  }
 
   const [selectedQuantity, setSelectedQuantity] = useState<QuantityOption>(quantityOptions[0]);
   const [selectedSize, setSelectedSize] = useState<ProductSize>(productSizes[0]);
@@ -42,6 +40,10 @@ export default function CustomPouchBags() {
     const calculated = calculatePrice(selectedSize, selectedQuantity);
     return calculated || { total: 0, perBox: 0 }; // Fallback for unexpected results
   }, [selectedSize, selectedQuantity]);
+  
+  if (!productSizes.length || !quantityOptions.length) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-white mt-20">
@@ -75,11 +77,14 @@ export default function CustomPouchBags() {
           activeIndex === index ? "opacity-100" : "opacity-0"
         }`}
       >
-        <img
-          src={image}
-          alt={`Product image ${index + 1}`}
-          className="w-full h-full object-contain"
-        />
+      <Image
+                            src={image}
+                            alt={`Product image ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="responsive"
+                            width={500}
+                            height={500}
+                          />
       </div>
     ))}
   </div>
@@ -112,11 +117,14 @@ export default function CustomPouchBags() {
             : "border-gray-200 hover:border-gray-400"
         }`}
       >
-        <img
-          src={image}
-          alt={`Thumbnail ${index + 1}`}
-          className="w-full h-full object-contain"
-        />
+            <Image
+                            src={image}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="intrinsic"
+                            width={100}
+                            height={100}
+                          />
       </button>
     ))}
   </div>

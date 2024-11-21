@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image'; // Import Image from next/image
 import FeaturesSection from '@/components/sections/featuresSection';
 import { useState, useMemo } from "react";
 import { ArrowRight, Star } from "lucide-react";
@@ -11,13 +12,13 @@ import { ProductSize, QuantityOption } from "@/lib/types";
 import FloatingCallButton from '@/components/sections/floatingCallButton';
 import FAQ from '@/components/sections/faq';
  
+ 
 const productImages = [
-  "/Images/candle-nobg.png",
-  "/Images/candle.jpg",
-  "/Images/choco2.png",
-  "/Images/choco3.png",
+  "/Images/candle-nobg/candle-nobg1.png",
+  "/Images/candle-nobg/candle-nobg2.png",
+  "/Images/candle-nobg/candle-nobg3.png",
+  "/Images/candle-nobg/candle-nobg4.png",
 ];
-
 
 export default function CustomPouchBags() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,11 +31,6 @@ export default function CustomPouchBags() {
       (prevIndex - 1 + productImages.length) % productImages.length
     );
   };
-  
-  if (!productSizes.length || !quantityOptions.length) {
-    return <div>Loading...</div>;
-  }
-
   const [selectedQuantity, setSelectedQuantity] = useState<QuantityOption>(quantityOptions[0]);
   const [selectedSize, setSelectedSize] = useState<ProductSize>(productSizes[0]);
 
@@ -42,6 +38,10 @@ export default function CustomPouchBags() {
     const calculated = calculatePrice(selectedSize, selectedQuantity);
     return calculated || { total: 0, perBox: 0 }; // Fallback for unexpected results
   }, [selectedSize, selectedQuantity]);
+
+  if (!productSizes.length || !quantityOptions.length) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-white mt-20">
@@ -75,11 +75,14 @@ export default function CustomPouchBags() {
           activeIndex === index ? "opacity-100" : "opacity-0"
         }`}
       >
-        <img
-          src={image}
-          alt={`Product image ${index + 1}`}
-          className="w-full h-full object-contain"
-        />
+        <Image
+                            src={image}
+                            alt={`Product image ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="responsive"
+                            width={500}
+                            height={500}
+                          />
       </div>
     ))}
   </div>
