@@ -14,10 +14,10 @@ import Image from 'next/image'; // Import Image from next/image
 
  
 const productImages = [
-  "/Images/polimailer-nobg.png",
-  "/Images/choco1.png",
-  "/Images/choco2.png",
-  "/Images/choco3.png",
+  "/Images/mylar-nobg/mylar-nobg1.png",
+  "/Images/mylar-nobg/mylar-nobg2.png",
+  "/Images/mylar-nobg/mylar-nobg3.png",
+  "/Images/mylar-nobg/mylar-nobg4.png",
 ];
 
 

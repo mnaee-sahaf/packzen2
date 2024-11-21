@@ -115,11 +115,14 @@ export default function CustomPouchBags() {
             : "border-gray-200 hover:border-gray-400"
         }`}
       >
-        <img
-          src={image}
-          alt={`Thumbnail ${index + 1}`}
-          className="w-full h-full object-contain"
-        />
+         <Image
+                            src={image}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="intrinsic"
+                            width={100}
+                            height={100}
+                          />
       </button>
     ))}
   </div>

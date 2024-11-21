@@ -14,10 +14,10 @@ import Image from 'next/image'; // Import Image from next/image
 
  
 const productImages = [
-  "/Images/rigid-nobg.png",
-  "/Images/rigid.jpg",
-  "/Images/choco2.png",
-  "/Images/choco3.png",
+  "/Images/rigid-nobg/rigid-nobg1.png",
+  "/Images/rigid-nobg/rigid-nobg2.png",
+  "/Images/rigid-nobg/rigid-nobg3.png",
+  "/Images/rigid-nobg/rigid-nobg4.png",
 ];
 
 

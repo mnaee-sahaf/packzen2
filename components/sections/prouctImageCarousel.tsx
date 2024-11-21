@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -39,11 +40,14 @@ export function ProductImageCarousel() {
                     activeIndex === index ? "block" : "hidden"
                   }`}
                 >
-                  <img
-                    src={image}
-                    alt={`Product image ${index + 1}`}
-                    className="w-full h-full object-contain"
-                  />
+                  <Image
+                            src={image}
+                            alt={`Product image ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="responsive"
+                            width={500}
+                            height={500}
+                          />
                 </div>
               </CarouselItem>
             ))}
@@ -77,11 +81,14 @@ export function ProductImageCarousel() {
                   : "border-gray-200 hover:border-gray-400"
               }`}
           >
-            <img
-              src={image}
-              alt={`Thumbnail ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
+             <Image
+                            src={image}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-contain"
+                            layout="intrinsic"
+                            width={100}
+                            height={100}
+                          />
           </button>
         ))}
       </div>

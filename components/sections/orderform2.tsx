@@ -10,10 +10,6 @@ import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-dat
 import { ProductSize, QuantityOption } from "@/lib/types";
 
 export default function OrderForm2() {
-  if (!productSizes.length || !quantityOptions.length) {
-    return <div>Loading...</div>;
-  }
-
   const [selectedQuantity, setSelectedQuantity] = useState<QuantityOption>(quantityOptions[0]);
   const [selectedSize, setSelectedSize] = useState<ProductSize>(productSizes[0]);
 
@@ -21,6 +17,10 @@ export default function OrderForm2() {
     const calculated = calculatePrice(selectedSize, selectedQuantity);
     return calculated || { total: 0, perBox: 0 }; // Fallback for unexpected results
   }, [selectedSize, selectedQuantity]);
+  
+  if (!productSizes.length || !quantityOptions.length) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
