@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button'; // Corrected import statement for Button
 import { Switch } from '@radix-ui/react-switch';
 import { Label } from '@radix-ui/react-label';
-import TawkToScript from '@/components/sections/tawkToScript';
+import FloatingCallButton from '@/components/sections/floatingCallButton';
 
 
 export default function Products() {
@@ -150,7 +150,7 @@ export default function Products() {
 
   return (
     <div className="flex flex-col min-h-screen">      
-     <TawkToScript/>  
+     <FloatingCallButton/>  
       <main className="container mx-auto p-4 flex-1 mt-16">
         <h1 className="text-3xl font-bold mb-4">Our Products</h1>
         <p className="mb-4">Explore our range of products.</p>

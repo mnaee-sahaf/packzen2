@@ -1,7 +1,10 @@
+import FloatingButtons from "@/components/sections/floatingCallButton";
 
 export default function About() {
   return (
-    <div className="container mx-auto p-6 rounded-lg shadow-md mt-16"> {/* Added margin-top to prevent being cut by the header */}
+    <div className="container mx-auto p-6 rounded-lg shadow-md mt-16"> 
+    <FloatingButtons/>
+    {/* Added margin-top to prevent being cut by the header */}
       <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">About Us</h1>
       <div className="space-y-4 mb-6"> {/* Added margin-bottom for spacing between this section and the video section */}
         <p className="text-lg">
