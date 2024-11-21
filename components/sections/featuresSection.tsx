@@ -21,7 +21,7 @@ export default function FeaturesSection() {
     },
     {
       icon: <BadgeCheck className="w-12 h-12 text-green-600" />,
-      title: "The PakFactory Promise",
+      title: "The Packeeze Promise",
       description:
         "We guarantee the highest quality experience for every packaging order.",
     },

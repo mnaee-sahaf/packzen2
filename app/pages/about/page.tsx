@@ -1,5 +1,4 @@
 import FloatingButtons from "@/components/sections/floatingCallButton";
-import OrderForm2 from "@/components/sections/orderform2";
 
 export default function About() {
   return (

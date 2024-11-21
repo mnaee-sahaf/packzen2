@@ -2,27 +2,35 @@
 
 import FeaturesSection from '@/components/sections/featuresSection';
 import { useState, useMemo } from "react";
-import { Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ProductImageCarousel } from "@/components/sections/prouctImageCarousel";
 import { ProductFeatures } from "@/components/sections/productFeatures";
 import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-data";
 import { ProductSize, QuantityOption } from "@/lib/types";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import FloatingCallButton from '@/components/sections/floatingCallButton';
-
-
+import FAQ from '@/components/sections/faq';
+ 
+const productImages = [
+  "/Images/pouch-nobg.png",
+  "/Images/choco1.png",
+  "/Images/choco2.png",
+  "/Images/choco3.png",
+];
 
 
 export default function CustomPouchBags() {
-
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % productImages.length);
+  };
+  
+  const handlePrevious = () => {
+    setActiveIndex((prevIndex) =>
+      (prevIndex - 1 + productImages.length) % productImages.length
+    );
+  };
+  
   if (!productSizes.length || !quantityOptions.length) {
     return <div>Loading...</div>;
   }
@@ -45,7 +53,7 @@ export default function CustomPouchBags() {
           <ol className="flex items-center space-x-2 text-sm text-gray-500">
             <li>Home</li>
             <li>•</li>
-            <li className="font-medium text-gray-900">Mailing Boxes</li>
+            <li className="font-medium text-gray-900">Custom Pouches</li>
           </ol>
         </nav>
 
@@ -54,7 +62,67 @@ export default function CustomPouchBags() {
           {/* Left Column - Product Images */}
           <div className="w-full">
             <div className="sticky top-8">
-              <ProductImageCarousel />
+            <div className="w-full space-y-4">
+
+
+            <div className="relative aspect-square bg-white rounded-lg overflow-hidden">
+  {/* Carousel Content */}
+  <div className="w-full h-full relative">
+    {productImages.map((image, index) => (
+      <div
+        key={index}
+        className={`absolute inset-0 transition-opacity duration-300 ${
+          activeIndex === index ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <img
+          src={image}
+          alt={`Product image ${index + 1}`}
+          className="w-full h-full object-contain"
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Navigation Buttons */}
+  <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4">
+    <button
+      onClick={handlePrevious}
+      className="p-2 bg-white/90 rounded-full shadow hover:bg-gray-100"
+    >
+      &lt; {/* You can use an icon here */}
+    </button>
+    <button
+      onClick={handleNext}
+      className="p-2 bg-white/90 rounded-full shadow hover:bg-gray-100"
+    >
+      &gt; {/* You can use an icon here */}
+    </button>
+  </div>
+
+  {/* Thumbnails */}
+  <div className="grid grid-cols-4 xs:grid-cols-2 sm:grid-cols-4 gap-2 mt-4">
+    {productImages.map((image, index) => (
+      <button
+        key={index}
+        onClick={() => setActiveIndex(index)}
+        className={`aspect-square rounded-md overflow-hidden border-2 transition-colors bg-white ${
+          activeIndex === index
+            ? "border-black"
+            : "border-gray-200 hover:border-gray-400"
+        }`}
+      >
+        <img
+          src={image}
+          alt={`Thumbnail ${index + 1}`}
+          className="w-full h-full object-contain"
+        />
+      </button>
+    ))}
+  </div>
+</div>
+</div>
+
             </div>
           </div>
 
@@ -63,7 +131,7 @@ export default function CustomPouchBags() {
             <div className="space-y-6">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Mailing Boxes
+                  Custom Pouches
                 </h1>
 
                 <div className="flex items-center gap-2">
@@ -75,7 +143,7 @@ export default function CustomPouchBags() {
                       />
                     ))}
                   </div>
-                  <span className="text-gray-600">142 Reviews</span>
+                  <span className="text-gray-600">83 Reviews</span>
                 </div>
               </div>
 
@@ -152,13 +220,14 @@ export default function CustomPouchBags() {
                       </Select>
                     </div>
                   </div>
-
-                  <Button
-                    className="w-full bg-black text-white hover:bg-gray-800 h-12 text-lg font-medium"
-                    aria-label="Add to cart"
-                  >
-                    Add to cart
-                  </Button>
+                  <div className="w-full max-w-md">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScZssQngbYTcIozlKWjiys3LymnlYKwMc_Mmcc_ANpr5A9gjA/viewform?usp=pp_url">
+                    <Button className="bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center w-full space-x-2 py-3 text-lg font-semibold transition">
+                      <span>Get A Custom Quote</span>
+                      <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </a>
+                </div>
                 </form>
               </div>
             </div>
@@ -168,13 +237,13 @@ export default function CustomPouchBags() {
         {/* Product Title */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900">
-            Elegant shoulder neck boxes with zero effort
+            Custom Pouches Can Be Used For Anything
           </h2>
         </div>
       </main>
     </div>
     <FeaturesSection/>
-
+    <FAQ/>
     </div>
   );
 }
