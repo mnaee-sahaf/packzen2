@@ -4,12 +4,12 @@ import { useState, useMemo } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ProductImageCarousel } from "@/components/sections/ProductImageCarousel";
-import { ProductFeatures } from "@/components/sections/ProductFeatures";
+import { ProductImageCarousel } from "@/components/sections/prouctImageCarousel";
+import { ProductFeatures } from "@/components/sections/productFeatures";
 import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-data";
 import { ProductSize, QuantityOption } from "@/lib/types";
 
-export default function ProductPage() {
+export default function OrderForm2() {
   if (!productSizes.length || !quantityOptions.length) {
     return <div>Loading...</div>;
   }
@@ -128,7 +128,7 @@ export default function ProductPage() {
                           <SelectValue placeholder="Select size" />
                         </SelectTrigger>
                         <SelectContent>
-                          {productSizes.map((size) => (
+                          {productSizes.map((size ) => (
                             <SelectItem key={size.name} value={size.name}>
                               {size.name} ({size.dimensions})
                             </SelectItem>

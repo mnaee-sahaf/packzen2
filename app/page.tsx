@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Link as LucideLink, Phone } from 'lucide-react' // Rename Link from lucide-react
 import Link from 'next/link' // Import Next.js Link
 import { useEffect } from 'react'
-import TawkToScript from '@/components/sections/tawkToScript';
+import FloatingCallButton from '@/components/sections/floatingCallButton'
 
 const productCategories = [
   { name: 'Tuck Boxes', image: '/Images/tuck.png' },
@@ -19,8 +19,8 @@ const productCategories = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen g-white">   
-      <TawkToScript/>    
+    <div className="flex flex-col min-h-screen g-white">
+      <FloatingCallButton/>   
       <main className="flex-1">
         <section className="w-full py-4 md:py-8 lg:py-16 xl:py-24 bg-[#F9FAFB] mt-16">
           <div className="container px-4 md:px-6">

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import ProductSpecification from '@/components/sections/productSpecification';
-import TawkToScript from '@/components/sections/tawkToScript';
+import FloatingCallButton from '@/components/sections/floatingCallButton';
 import Image from 'next/image';
 import Script from 'next/script';
 
@@ -21,7 +21,7 @@ export default function ChocolateBarBoxes() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white mt-20">
-      <TawkToScript/>
+      <FloatingCallButton/>
       <main className="flex-1">
         <div className="container mx-auto p-6 flex flex-col lg:flex-row">
           {/* Left Section: Product Image and Carousel */}
