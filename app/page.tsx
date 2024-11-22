@@ -3,10 +3,10 @@ import { LowerHero } from '@/components/sections/lowerHero'
 import { Features } from '@/components/sections/features'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Link as LucideLink, Phone } from 'lucide-react' // Rename Link from lucide-react
+import { ArrowRight, Link as Phone, X } from 'lucide-react' // Rename Link from lucide-react
 import Link from 'next/link' // Import Next.js Link
-import { useEffect } from 'react'
 import FloatingCallButton from '@/components/sections/floatingCallButton'
+import Script from 'next/script'
 
 const productCategories = [
   { name: 'Tuck Boxes', image: '/Images/tuck.png' },
@@ -19,6 +19,19 @@ const productCategories = [
 
 export default function HomePage() {
   return (
+
+    <>
+     <Script
+        id="gtm-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WCGL4342');`,
+        }}
+      />
     <div className="flex flex-col min-h-screen g-white">
       <FloatingCallButton/>   
       <main className="flex-1">
@@ -115,5 +128,8 @@ export default function HomePage() {
         <LowerHero/>
       </main>
     </div>
+
+    </>
   )
 }
+
