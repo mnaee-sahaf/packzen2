@@ -5,13 +5,13 @@ import { useState, useMemo } from "react";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ProductFeatures } from "@/components/sections/productFeatures";
 import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-data";
 import { ProductSize, QuantityOption } from "@/lib/types";
 import FloatingCallButton from '@/components/sections/floatingCallButton';
 import FAQ from '@/components/sections/faq';
 import ProductSpecification from '@/components/sections/productSpecification';
 import { Features } from '@/components/sections/features';
+import FeaturesSection from '@/components/sections/featuresSection';
  
  
 const productImages = [
@@ -241,6 +241,7 @@ export default function CustomPouchBags() {
         </div>
       </main>
     </div>
+    <FeaturesSection/>
     <ProductSpecification/>
     <FAQ/>
     </div>
