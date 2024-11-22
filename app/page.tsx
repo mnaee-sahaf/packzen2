@@ -33,6 +33,7 @@ export default function HomePage() {
         }}
       />
     <div className="flex flex-col min-h-screen g-white">
+    <title>Packeeze - Cusotm Packaging Simplified</title>     
       <FloatingCallButton/>   
       <main className="flex-1">
         <section className="w-full py-4 md:py-8 lg:py-16 xl:py-24 bg-[#F9FAFB] mt-16">

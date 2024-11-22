@@ -46,7 +46,8 @@ export default function CustomPouchBags() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white mt-20">
-    <FloatingCallButton/>
+        <title>Packeeze - Cusotm Packaging Simplified</title>     
+        <FloatingCallButton/>
     <div className="min-h-screen bg-gray-50">
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
