@@ -5,12 +5,13 @@ import { useState, useMemo } from "react";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ProductFeatures } from "@/components/sections/productFeatures";
 import { productSizes, quantityOptions, calculatePrice } from "@/lib/product-data";
 import { ProductSize, QuantityOption } from "@/lib/types";
 import FloatingCallButton from '@/components/sections/floatingCallButton';
 import FAQ from '@/components/sections/faq';
 import Image from 'next/image'; // Import Image from next/image
+import { Features } from '@/components/sections/features';
+import ProductSpecification from '@/components/sections/productSpecification';
 
  
 const productImages = [
@@ -158,19 +159,11 @@ export default function CustomPouchBags() {
 
               {/* Price Section */}
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-900 mb-2">Price</h2>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-gray-900">
-                    ${price.total}
-                  </span>
-                  <span className="text-gray-500">
-                    (${price.perBox} per box)
-                  </span>
-                </div>
+               <Features/>
               </div>
 
               {/* Features */}
-              <ProductFeatures />
+              {/* <ProductFeatures /> */}
 
               {/* Product Form */}
               <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -252,6 +245,7 @@ export default function CustomPouchBags() {
       </main>
     </div>
     <FeaturesSection/>
+    <ProductSpecification/>
     <FAQ/>
     </div>
   );
