@@ -9,7 +9,7 @@ import FloatingCallButton from '@/components/sections/floatingCallButton'
 import Script from 'next/script'
 
 const productCategories = [
-  { name: 'Tuck Boxes', image: '/Images/tuck.png' },
+  { name: 'Mylar Bags', image: '/Images/mylar-nobg/mylar3-nobg.png' },
   { name: 'Rigid Boxes', image: '/Images/rigid.jpg' },
   { name: 'Kraft Boxes', image: '/Images/kraft.png' },
   { name: 'Gable Boxes', image: '/Images/gable.png' },

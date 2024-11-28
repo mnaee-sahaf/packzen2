@@ -43,6 +43,15 @@ export default function Products() {
   // Array of product objects with unique content
   const products = [
     {
+      title: "Mylar Bags",
+      alt_title: "Custom Mylar Bags",
+      image: "/Images/mylar-nobg/mylar1.webp", // Updated path
+      description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
+      subDescription: "MOQ 100 UNITS",
+      link: "/pages/products/mylar"
+
+    },
+    {
       title: "Chocolate Bar Boxes",
       alt_title: "Packaging Mailer Boxes",
       image: "/Images/choco-nobg.png", // Updated path
@@ -106,14 +115,14 @@ export default function Products() {
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/magnetic-box"
     },
-    {
-      title: "6 by 9 Poly Mailers",
-      alt_title: "Packaging Drawer Boxes",
-      image: "/Images/polimailer-nobg.png", // Updated path
-      description: "Showcase your products in an elegant way with rigid drawer boxes. Use a ribbon pull tab or a custom thumb notch for a seamless sliding drawer experience.",
-      subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/six-by-nine-poly-mailers"
-    },
+    // {
+    //   title: "6 by 9 Poly Mailers",
+    //   alt_title: "Packaging Drawer Boxes",
+    //   image: "/Images/polimailer-nobg.png", // Updated path
+    //   description: "Showcase your products in an elegant way with rigid drawer boxes. Use a ribbon pull tab or a custom thumb notch for a seamless sliding drawer experience.",
+    //   subDescription: "MOQ 100 UNITS",
+    //   link: "/pages/products/six-by-nine-poly-mailers"
+    // },
     {
       title: "Kraft Boxes",
       alt_title: "Packaging Display Boxes",
@@ -137,7 +146,6 @@ export default function Products() {
       description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
       subDescription: "MOQ 100 UNITS",
       link: "/pages/products/rigid-boxes"
-
     },
     
   ];
