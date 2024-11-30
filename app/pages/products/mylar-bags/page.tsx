@@ -11,14 +11,14 @@ import FloatingCallButton from '@/components/sections/floatingCallButton';
 import FAQ from '@/components/sections/faq';
 import Image from 'next/image'; // Import Image from next/image
 import { Features } from '@/components/sections/features';
-import ProductSpecification from '@/components/sections/productSpecification';
 
  
 const productImages = [
-  "/Images/mylar-nobg/Mylar1-nobg.png",
+  "/Images/mylar-nobg/mylar3-nobg.png",
   "/Images/mylar-nobg/Mylar2-nobg.png",
-  "/Images/mylar-nobg/Mylar3-nobg.png",
-  "/Images/mylar-nobg/Mylar4-nobg.png",
+  "/Images/mylar-nobg/Mylar1-nobg.png",
+  "/Images/mylar-nobg/mylar4-nobg.png",
+  "/Images/mylar-nobg/mylar5-nobg.png",
 ];
 
 
