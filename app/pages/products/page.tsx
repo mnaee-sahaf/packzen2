@@ -48,7 +48,7 @@ export default function Products() {
       image: "/Images/mylar-nobg/mylar1.webp", // Updated path
       description: "Use box dividers or partitions to easily organize and pack products inside your box. Create multiple compartments to separate different sized products from one another.",
       subDescription: "MOQ 100 UNITS",
-      link: "/pages/products/mylar"
+      link: "/pages/products/mylar-bags"
 
     },
     {
